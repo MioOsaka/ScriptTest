@@ -10,15 +10,16 @@ public class Boss {
 		int decmp = this.mp - 5;
 
 		if (decmp < 0) {
-			//mpが0未満の場合
+			//mpが5未満の場合
 			Debug.Log ("MPが足りないため魔法が使えない");
 		} else {
-			//mpが0以上の場合
+			//mpが5以上の場合
 			Debug.Log ("魔法攻撃をした 残りMPは" + decmp);
+			//残りmpを減らす
+			this.mp = decmp;
 		}
-		//残りmpを減らす
-		this.mp = decmp;
-		}
+			
+	}
 }
 
 
@@ -35,7 +36,6 @@ public class Test2 : MonoBehaviour {
 		}
 	}
 	// Update is called once per frame
-	void Update () {
-
-	}
+		void Update () {
+		}
 }
